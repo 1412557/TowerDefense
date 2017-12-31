@@ -31,12 +31,13 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        PlayerStat.Rounds++;
+        waveNumber++;
         for (int i = 0; i < waveNumber; i++)
         {
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f);
         }
-        waveNumber++;
     }
 
     private void SpawnEnemy()
