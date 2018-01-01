@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,29 +16,42 @@ public class BuildManager : MonoBehaviour {
         instance = this;
     }
     public GameObject BuildEffect;
-
+    public GameObject sellEffect;
+    public NodeUI nodeUI;
 
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStat.money >= turretToBuild.cost; } }
 
-    public void BuildTurretOn(Node node)
+
+    public void SelectNode(Node node)
     {
-        if(PlayerStat.money < turretToBuild.cost)
+        if(selectedNode == node)
         {
+            DeselectedNode();
             return;
         }
-        PlayerStat.money -= turretToBuild.cost;
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.getBuildPosition(), Quaternion.identity);
-        node.turret = turret;
+        selectedNode = node;
+        turretToBuild = null;
+        nodeUI.setTarget(node);
+    }
 
-        GameObject effect = (GameObject)Instantiate(BuildEffect, node.getBuildPosition(), Quaternion.identity);
-        Destroy(effect, 5f);
+    public void DeselectedNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
     }
 
     public void SetTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        DeselectedNode();
+    }
+
+    public TurretBlueprint getTurretToBuild()
+    {
+        return turretToBuild;
     }
 }
