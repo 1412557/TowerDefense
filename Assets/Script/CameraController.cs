@@ -26,12 +26,7 @@ public class CameraController : MonoBehaviour {
             this.enabled = false;
             return;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            doMovement = !doMovement;
-
-        if (!doMovement)
-            return;
+        
 
         if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
