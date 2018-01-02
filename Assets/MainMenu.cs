@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public string levelToLoad = "mainscene";
+
+    public SceneFader sceneFader;
 	// Use this for initialization
 	public void Play () {
-        SceneManager.LoadScene(levelToLoad);
+        sceneFader.FadeTo(levelToLoad);
 	}
 	
 	// Update is called once per frame

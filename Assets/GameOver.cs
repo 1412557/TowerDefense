@@ -9,6 +9,10 @@ public class GameOver : MonoBehaviour {
     // Use this for initialization
     public Text roundsText;
 
+    public SceneFader sceneFader;
+
+    public string MenuSceneName = "mainmenu";
+
     void OnEnable()
     {
         roundsText.text = PlayerStat.Rounds.ToString();
@@ -16,11 +20,11 @@ public class GameOver : MonoBehaviour {
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-
+        sceneFader.FadeTo(MenuSceneName);
     }
 }
