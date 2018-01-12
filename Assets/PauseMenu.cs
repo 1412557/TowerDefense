@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour {
     public GameObject ui;
     public SceneFader sceneFader;
     // Use this for initialization
-    public string MenuSceneName = "mainmenu";
+    public string MenuSceneName = "MainMenu2D";
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
