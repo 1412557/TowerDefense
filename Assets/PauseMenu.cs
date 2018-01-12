@@ -31,11 +31,16 @@ public class PauseMenu : MonoBehaviour {
         }
     }
 
-    public void Retry()
+    public void RetryInPause()
     {
         Toggle();
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+		this.Retry ();
     }
+
+	public void Retry()
+	{
+		sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+	}
 
     public void Menu()
     {

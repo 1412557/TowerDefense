@@ -13,11 +13,19 @@ public class WaveSpawner : MonoBehaviour {
     public Transform spawnPoint;
 
     public Text WaveCountDown;
+	public Text WaveNumber;
+	public float LevelPrepareTime = 20f;
     public float timeBetweenWaves = 5f;
-    private float countDown = 2f;
+	private float countDown;
 
     public GameManager gameManager;
     private int waveNumber = 0;
+
+	void Start()
+	{
+		countDown = LevelPrepareTime;
+	}
+		
 
     void Update()
     {
@@ -25,7 +33,6 @@ public class WaveSpawner : MonoBehaviour {
         {
             return;
         }
-
         if (waveNumber == waves.Length)
         {
             gameManager.WinLevel();
@@ -36,12 +43,13 @@ public class WaveSpawner : MonoBehaviour {
         {
             StartCoroutine(SpawnWave());
             countDown = timeBetweenWaves;
-            return;
+            //return;
         }
-        countDown -= Time.deltaTime;
+		countDown -= Time.deltaTime;
         countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);
 
-        WaveCountDown.text = string.Format("{0:00.00}", countDown);
+		WaveCountDown.text = string.Format("{0:00}", Math.Floor(countDown));
+		WaveNumber.text = string.Format ("Wave No: {0}", waveNumber);
     }
 
     IEnumerator SpawnWave()
