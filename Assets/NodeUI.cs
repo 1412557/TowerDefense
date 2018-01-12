@@ -20,16 +20,16 @@ public class NodeUI : MonoBehaviour {
         transform.position = target.getBuildPosition();
         if (!target.isUpgraded)
         {
-            upgradeCost.text = "$" + target.turretBlueprint.upgradeCost.ToString();
+            upgradeCost.text = "-" + target.turretBlueprint.upgradeCost.ToString();
             upgradeButton.interactable = true;
         }
         else
         {
-            upgradeCost.text = "MAX";
+            upgradeCost.text = "MAXED";
             upgradeButton.interactable = false;
         }
 
-        sellAmount.text = target.turretBlueprint.getSellAmount().ToString();
+        sellAmount.text = "+" + target.turretBlueprint.getSellAmount().ToString();
         UI.SetActive(true);
     }
 

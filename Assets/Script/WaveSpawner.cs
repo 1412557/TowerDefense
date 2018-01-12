@@ -14,10 +14,17 @@ public class WaveSpawner : MonoBehaviour {
 
     public Text WaveCountDown;
 	public Text WaveNumber;
+	public float LevelPrepareTime = 20f;
     public float timeBetweenWaves = 5f;
-    private float countDown = 5f;
+	private float countDown;
 
     private int waveNumber = 0;
+
+	void Start()
+	{
+		countDown = LevelPrepareTime;
+	}
+		
 
     void Update()
     {
