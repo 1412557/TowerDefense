@@ -103,6 +103,7 @@ public class Turret : MonoBehaviour {
 
         if (!lineRenderer.enabled)
         {
+            FindObjectOfType<AudioManager>().Play("Laser");
             lineRenderer.enabled = true;
             impactEffect.Play();
             impactLight.enabled = true;
@@ -120,6 +121,7 @@ public class Turret : MonoBehaviour {
 
     private void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("Fire");
         GameObject BulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = BulletGO.GetComponent<Bullet>();
 

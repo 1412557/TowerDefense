@@ -417,6 +417,102 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0d2c3cd7721cbd4196a47beaec8a76f, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &23962864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 23962866}
+  - component: {fileID: 23962865}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &23962865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23962864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd08115ad82ed14eba3dda818c92d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Click
+    clip: {fileID: 8300000, guid: 19df5a3b5d966d744aeffdfa3828dd3f, type: 3}
+    volume: 0.65
+    pitch: 1.61
+    source: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 8300000, guid: c43425d9e9091d1489cce4959e7cbf55, type: 3}
+    volume: 0.65
+    pitch: 1.68
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 70856af30f70d284a90019f7eb1bc926, type: 3}
+    volume: 0.718
+    pitch: 1.85
+    source: {fileID: 0}
+  - name: Lifeloss
+    clip: {fileID: 8300000, guid: dc1ef6700cc12cb43928d41bc71e10cf, type: 3}
+    volume: 0.64
+    pitch: 2.09
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 185effe7cec5b8c4a943e284f352a8df, type: 3}
+    volume: 0.676
+    pitch: 2.23
+    source: {fileID: 0}
+  - name: Build
+    clip: {fileID: 8300000, guid: b801a064499d599468d274e5f46aa7ff, type: 3}
+    volume: 0.656
+    pitch: 2.21
+    source: {fileID: 0}
+  - name: Sold
+    clip: {fileID: 8300000, guid: ff9952474f3e005498d7df9677ac8d80, type: 3}
+    volume: 0.68
+    pitch: 2.43
+    source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: ae0e4d99b5415da49ba0d7f351271fcc, type: 3}
+    volume: 0.571
+    pitch: 2.07
+    source: {fileID: 0}
+  - name: WaveStart
+    clip: {fileID: 8300000, guid: d9dc591c0da811a42ac3da236b9a225d, type: 3}
+    volume: 0.81
+    pitch: 2.28
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 4238b3b7d3d9b724ba3598eb8cad6df1, type: 3}
+    volume: 0.62
+    pitch: 2.01
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 010192a644b077e4f8111158fbccd5d1, type: 3}
+    volume: 0.718
+    pitch: 2.34
+    source: {fileID: 0}
+--- !u!4 &23962866
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23962864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2699997, y: 9.5, z: 8.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &27986863 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 4a31e8ab772cadd4ea891a23595e9a2d, type: 3}

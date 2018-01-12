@@ -59,6 +59,8 @@ public class Node : MonoBehaviour {
         }
         PlayerStat.money -= blueprint.cost;
         GameObject _turret = (GameObject)Instantiate(blueprint.prefab, getBuildPosition(), Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Build");
+        FindObjectOfType<AudioManager>().Play("Buy");
         turret = _turret;
 
         turretBlueprint = blueprint;
@@ -78,7 +80,8 @@ public class Node : MonoBehaviour {
         //build moi
         GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, getBuildPosition(), Quaternion.identity);
         turret = _turret;
-
+        FindObjectOfType<AudioManager>().Play("Upgrade");
+        FindObjectOfType<AudioManager>().Play("Buy");
         GameObject effect = (GameObject)Instantiate(buildManager.BuildEffect, getBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
         isUpgraded = true;
@@ -87,7 +90,7 @@ public class Node : MonoBehaviour {
     public void SellTurret()
     {
         PlayerStat.money += turretBlueprint.getSellAmount();
-
+        FindObjectOfType<AudioManager>().Play("Sold");
         GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, getBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
         Destroy(turret);

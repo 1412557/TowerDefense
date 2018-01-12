@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour {
     public void WinLevel()
     {
         GameIsOver = true;
+        FindObjectOfType<AudioManager>().Play("Win");
         CompleteLevel.SetActive(true);
     }
 }

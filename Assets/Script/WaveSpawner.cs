@@ -55,6 +55,7 @@ public class WaveSpawner : MonoBehaviour {
     IEnumerator SpawnWave()
     {
         PlayerStat.Rounds++;
+        FindObjectOfType<AudioManager>().Play("WaveStart");
 
         Wave wave = waves[waveNumber];
         EnemiesAlive = wave.count;

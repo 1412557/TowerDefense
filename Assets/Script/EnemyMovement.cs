@@ -44,6 +44,7 @@ public class EnemyMovement : MonoBehaviour {
     void EndPath()
     {
         PlayerStat.lives--;
+        FindObjectOfType<AudioManager>().Play("Lifeloss");
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
