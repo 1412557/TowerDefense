@@ -2665,7 +2665,7 @@ GameObject:
   - component: {fileID: 250892835}
   - component: {fileID: 250892834}
   m_Layer: 5
-  m_Name: Retry
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2740,8 +2740,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1422355969}
-        m_MethodName: Retry
+      - m_Target: {fileID: 1422355970}
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20108,18 +20108,6 @@ MonoBehaviour:
   - enemy: {fileID: 1828745633118974, guid: 4027410d341b90841af8c2fdf39e3cbb, type: 2}
     count: 6
     rate: 1
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
   spawnPoint: {fileID: 1091535657}
   WaveCountDown: {fileID: 196367616}
   timeBetweenWaves: 10
@@ -22344,8 +22332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1422355969}
-        m_MethodName: Menu
+      - m_Target: {fileID: 1422355970}
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
