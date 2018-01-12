@@ -4574,9 +4574,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - enemy: {fileID: 1611443240586442, guid: bda25f0ae450e614ba70051899bc9113, type: 2}
+    count: 1
+    rate: 1
   - enemy: {fileID: 1828745633118974, guid: 4027410d341b90841af8c2fdf39e3cbb, type: 2}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 1828745633118974, guid: 0ef3e31029407aa4e927450b3f402c8a, type: 2}
     count: 6
     rate: 1
+  - enemy: {fileID: 1828745633118974, guid: 0ef3e31029407aa4e927450b3f402c8a, type: 2}
+    count: 10
+    rate: 1
+  - enemy: {fileID: 1733916612322710, guid: 4af3b753eebe70a43b7c1bf146184f35, type: 2}
+    count: 2
+    rate: 0.5
   spawnPoint: {fileID: 1929955326}
   WaveCountDown: {fileID: 1109322193}
   WaveNumber: {fileID: 169062625}

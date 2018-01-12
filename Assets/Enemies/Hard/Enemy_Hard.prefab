@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 114021538485151438}
   - component: {fileID: 114732334244620828}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Hard
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828745633118974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.62, y: 1.71, z: 7.91}
+  m_LocalPosition: {x: 5.62, y: 1.71, z: 8.18}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 224185184685534822}
@@ -111,7 +111,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42487fddf933b7849b21aa7a53e3bacc, type: 2}
+  - {fileID: 2100000, guid: 03972630f4713b143a98aa975d80fa24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
