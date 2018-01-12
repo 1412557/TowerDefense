@@ -20123,7 +20123,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1091535657}
   WaveCountDown: {fileID: 196367616}
   timeBetweenWaves: 10
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1553177963}
 --- !u!4 &1553177967
 Transform:
   m_ObjectHideFlags: 0
