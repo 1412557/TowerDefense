@@ -12,7 +12,7 @@ public class LivesUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         livesText.text = PlayerStat.lives.ToString();
-		float amount = PlayerStat.lives / PlayerStat.StartLives;
+		float amount = (float)PlayerStat.lives / PlayerStat.StartLives;
 		hpBarFill.fillAmount = amount;
 	}
 }
