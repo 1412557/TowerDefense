@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour {
 
     public float startHealth = 100f;
     private float health;
+    private bool isDead = false;
 
     public int value = 9;
     public GameObject DeathEffect;
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour {
     {
         health -=amount;
         healthBar.fillAmount = health / startHealth;
-        if(health <= 0)
+        if(health <= 0 && !isDead)
         {
             Die();
         }
