@@ -887,12 +887,12 @@ Prefab:
     - target: {fileID: 224488031214771046, guid: c5166bb6fe75da74ebd4c640bf473535,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 657.5
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 224488031214771046, guid: c5166bb6fe75da74ebd4c640bf473535,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 305
+      value: 316.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5166bb6fe75da74ebd4c640bf473535, type: 2}
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42abe5ce39d4ebf4faa92a083b06dcc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: mainscene
+  levelToLoad: LevelSelect
   sceneFader: {fileID: 910416581}
 --- !u!4 &1616784908
 Transform:
